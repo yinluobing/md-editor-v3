@@ -1,3 +1,9 @@
+/*
+ * @Author: icker yinluobing@163.com
+ * @Date: 2024-08-13 14:07:45
+ * @LastEditors: icker
+ * @LastEditTime: 2024-08-13 17:41:56
+ */
 import { defineComponent, ref, watch } from 'vue';
 import Header from './Header';
 import Preview from './Preview';
@@ -40,20 +46,20 @@ export default defineComponent({
         />
         <div class="page-body">
           {/* <VueTemplate /> */}
-          <Preview
+          {/* <Preview
             theme={theme.value}
             previewTheme={previewTheme.value}
             codeTheme={codeTheme.value}
             lang={lang.value}
-          />
+          /> */}
 
           <VueTemplate />
 
-          <PreviewOnly
+          {/* <PreviewOnly
             theme={theme.value}
             previewTheme={previewTheme.value}
             codeTheme={codeTheme.value}
-          />
+          /> */}
         </div>
       </div>
     );

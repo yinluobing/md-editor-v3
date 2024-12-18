@@ -1,3 +1,9 @@
+/*
+ * @Author: icker yinluobing@163.com
+ * @Date: 2024-08-13 16:41:26
+ * @LastEditors: icker
+ * @LastEditTime: 2024-08-14 14:50:09
+ */
 import { defineComponent, ref, inject } from 'vue';
 import { prefix } from '~/config';
 import { useAutoScroll, useCodeMirror, useResize } from './composition';
@@ -35,7 +41,6 @@ export default defineComponent({
       },
       resetHistory
     });
-
     return () => {
       return (
         <div
@@ -44,6 +49,17 @@ export default defineComponent({
           }`}
           ref={contentRef}
         >
+
+          {props.catalogVisible && (
+            <MdCatalog
+              theme={props.theme}
+              class={`${prefix}-catalog-editor`}
+              editorId={editorId}
+              mdHeadingId={props.mdHeadingId}
+              key="internal-catalog"
+            />
+          )}
+          
           <div
             class={`${prefix}-input-wrapper`}
             style={inputWrapperStyle}
@@ -78,15 +94,7 @@ export default defineComponent({
             codeFoldable={props.codeFoldable}
             autoFoldThreshold={props.autoFoldThreshold}
           />
-          {props.catalogVisible && (
-            <MdCatalog
-              theme={props.theme}
-              class={`${prefix}-catalog-editor`}
-              editorId={editorId}
-              mdHeadingId={props.mdHeadingId}
-              key="internal-catalog"
-            />
-          )}
+          
         </div>
       );
     };

@@ -1,3 +1,9 @@
+/*
+ * @Author: icker yinluobing@163.com
+ * @Date: 2024-08-13 14:07:45
+ * @LastEditors: icker
+ * @LastEditTime: 2024-08-13 17:39:51
+ */
 export { default as MdEditor } from './MdEditor';
 export { default as MdPreview } from './MdPreview';
 

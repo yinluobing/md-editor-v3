@@ -133,6 +133,7 @@ const useCodeMirror = (props: ContentProps) => {
   };
 
   onMounted(() => {
+ 
     const view = new EditorView({
       doc: props.modelValue,
       parent: inputWrapperRef.value,
